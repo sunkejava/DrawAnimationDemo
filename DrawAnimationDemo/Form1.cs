@@ -17,6 +17,7 @@ namespace DrawAnimationDemo
         {
             InitializeComponent();
         }
+        private Color mainColor = Color.FromArgb(255, 92, 138);//背景色
         private static Timer tmc = new Timer();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -66,6 +67,7 @@ namespace DrawAnimationDemo
         {
             e.Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+            e.Graphics.FillEllipse(new SolidBrush(this.mainColor), new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
             using (Pen p = new Pen(Brushes.LightGray, circularWidth))
             {
                 //设置连续两段的联接样式  
