@@ -40,7 +40,7 @@ namespace DrawAnimationDemo.CustomControl
                 //设置连续两段的联接样式  
                 p.LineJoin = LineJoin.Round;
                 //e.Graphics.DrawEllipse(p, new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
-                e.Graphics.DrawEllipse(p, tyx, tyy, tyw, tyh);
+                e.Graphics.DrawEllipse(p, new Rectangle(tyx, tyy, tyw, tyh));
             }
         }
 
@@ -49,12 +49,12 @@ namespace DrawAnimationDemo.CustomControl
             e.Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
             //e.Graphics.FillEllipse(new SolidBrush(this.mainColor), new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
-            using (Pen p = new Pen(Brushes.LightGray, tyw))
+            using (Pen p = new Pen(Color.FromArgb(125, 255, 92, 138), tyw))
             {
                 //设置连续两段的联接样式  
                 p.LineJoin = LineJoin.Round;
                 //e.Graphics.DrawEllipse(p, new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
-                e.Graphics.DrawEllipse(p, tyx, tyy, tyw, tyh);
+                e.Graphics.DrawEllipse(p, new Rectangle(tyx, tyy, tyw, tyh));
             }
         }
     }

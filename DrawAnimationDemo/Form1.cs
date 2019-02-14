@@ -28,6 +28,7 @@ namespace DrawAnimationDemo
         {
             tmc.Interval = 50;
             tmc.Tick += Tmc_Tick;
+            label5.Text = tyControl1.Size.ToString();
         }
 
         private void Tmc_Tick(object sender, EventArgs e)
