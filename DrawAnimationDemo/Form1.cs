@@ -67,13 +67,55 @@ namespace DrawAnimationDemo
         {
             e.Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
-            e.Graphics.FillEllipse(new SolidBrush(this.mainColor), new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
-            using (Pen p = new Pen(Brushes.LightGray, circularWidth))
+            //e.Graphics.FillEllipse(new SolidBrush(this.mainColor), new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
+            using (Pen p = new Pen(Brushes.LightGray, 293))
             {
                 //设置连续两段的联接样式  
                 p.LineJoin = LineJoin.Round;
-                e.Graphics.DrawEllipse(p, new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
+                //e.Graphics.DrawEllipse(p, new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
+                e.Graphics.DrawEllipse(p, 0, 258, 293, 293);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Timer tm = new Timer();
+            tm.Interval = 100;
+            tm.Tick += Tm_Tick;
+            tm.Enabled = true;
+        }
+
+        private void Tm_Tick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void trackBarx_ValueChanged(object sender, EventArgs e)
+        {
+            tyControl1.Tyx = trackBarx.Value;
+            label1.Text = "x:" + trackBarx.Value;
+            tyControl1.Refresh();
+        }
+
+        private void trackBary_ValueChanged(object sender, EventArgs e)
+        {
+            tyControl1.Tyy = trackBary.Value;
+            label2.Text = "y:" + trackBary.Value;
+            tyControl1.Refresh();
+        }
+
+        private void trackBarw_ValueChanged(object sender, EventArgs e)
+        {
+            tyControl1.Tyw = trackBarw.Value;
+            label3.Text = "w:" + trackBarw.Value;
+            tyControl1.Refresh();
+        }
+
+        private void trackBarh_ValueChanged(object sender, EventArgs e)
+        {
+            tyControl1.Tyh = trackBarh.Value;
+            label4.Text = "h:" + trackBarh.Value;
+            tyControl1.Refresh();
         }
     }
 }
