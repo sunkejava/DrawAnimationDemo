@@ -13,14 +13,15 @@ namespace DrawAnimationDemo.CustomControl
 {
     public partial class EllipseControl : Control
     {
-        public EllipseControl()
-        {
-            InitializeComponent();
-        }
         private Point leftPotion = new Point(0, 0);
         private Point rightPotion = new Point(0, 0);
         private Point centerPotion = new Point(0, 0);
         private bool isShowPotion = false;
+        public EllipseControl()
+        {
+            InitializeComponent();
+        }
+        
         [Description("左边点位置"), Category("自定义属性")]
         public Point LeftPotion
         {
@@ -73,7 +74,13 @@ namespace DrawAnimationDemo.CustomControl
                 isShowPotion = value;
             }
         }
-
+        protected override void OnSizeChanged(EventArgs e)
+        {
+            leftPotion = new Point(0, this.Height);
+            rightPotion = new Point(this.Width, this.Height);
+            centerPotion = new Point(this.Width / 2, this.Height / 5 * 4);
+            base.Refresh();
+        }
         protected override void OnPaint(PaintEventArgs ce)
         {
             int x1, y1, x2, y2, x3, y3;
@@ -105,7 +112,6 @@ namespace DrawAnimationDemo.CustomControl
             }
             double det = b * c - a * d;
             if (Math.Abs(det) > 0.001)
-
             {
 
                 //x0,y0为计算得到的原点
@@ -216,6 +222,9 @@ namespace DrawAnimationDemo.CustomControl
                 }
                 else Delta12 = angle2 - angle1 + 360;
                 mImgGraph.FillEllipse(new SolidBrush(Color.FromArgb(125, 255, 92, 138)), (int)(x0 - radius), (int)(y0 - radius), (int)(2 * radius), (int)(2 * radius));
+
+                SizeF size = mImgGraph.MeasureString("我是有底线的", new Font("黑体", 10F, System.Drawing.FontStyle.Bold));
+                mImgGraph.DrawString("我是有底线的", new Font("华文新魏", 10F, System.Drawing.FontStyle.Bold), new SolidBrush(Color.White), new Point(this.Width / 2 - (int)size.Width / 2 - 1, ((y1-y3)/2+y3) - (int)size.Height/2 + 2));
             }
         }
     }

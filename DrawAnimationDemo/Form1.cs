@@ -83,14 +83,29 @@ namespace DrawAnimationDemo
         private void button2_Click(object sender, EventArgs e)
         {
             Timer tm = new Timer();
-            tm.Interval = 100;
+            tm.Interval = 30;
             tm.Tick += Tm_Tick;
             tm.Enabled = true;
+            cheight = ellipseControl2.Height - 15;
         }
 
         private void Tm_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (cheight >= ellipseControl2.Height-50)
+            {
+                ellipseControl2.Visible = true;
+                ellipseControl2.CenterPotion = new Point(ellipseControl2.CenterPotion.X, cheight);
+                cheight = cheight - 5;
+                ellipseControl2.Refresh();
+            }
+            else
+            {
+                Timer tm = sender as Timer;
+                tm.Enabled = false;
+                cheight = 280;
+                ellipseControl2.Visible = false;
+                ellipseControl2.Refresh();
+            }
         }
 
         private void trackBarx_ValueChanged(object sender, EventArgs e)
