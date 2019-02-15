@@ -21,14 +21,27 @@ namespace DrawAnimationDemo.CustomControl
         private int tyy = 258;
         private int tyw = 293;
         private int tyh = 293;
-        public int Tyx {
+        public int Tyx
+        {
             get { return tyx; }
             set { tyx = value; }
         }
 
-        public int Tyy { get => tyy; set => tyy = value; }
-        public int Tyw { get => tyw; set => tyw = value; }
-        public int Tyh { get => tyh; set => tyh = value; }
+        public int Tyy
+        {
+            get { return tyy; }
+            set { tyy = value; }
+        }
+        public int Tyw
+        {
+            get { return tyw; }
+            set { tyw = value; }
+        }
+        public int Tyh
+        {
+            get { return tyh; }
+            set { tyh = value; }
+        }
 
         private void tyControl_Paint(object sender, PaintEventArgs e)
         {
@@ -40,7 +53,7 @@ namespace DrawAnimationDemo.CustomControl
                 //设置连续两段的联接样式  
                 p.LineJoin = LineJoin.Round;
                 //e.Graphics.DrawEllipse(p, new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
-                e.Graphics.DrawEllipse(p, new Rectangle(tyx, tyy, tyw, tyh));
+                e.Graphics.DrawEllipse(p, tyx, tyy, tyw, tyh);
             }
         }
 
@@ -54,7 +67,7 @@ namespace DrawAnimationDemo.CustomControl
                 //设置连续两段的联接样式  
                 p.LineJoin = LineJoin.Round;
                 //e.Graphics.DrawEllipse(p, new Rectangle(new Point(e.ClipRectangle.X + circularWidth / 2, e.ClipRectangle.Y + circularWidth / 2), new Size(e.ClipRectangle.Width - 1 - circularWidth, e.ClipRectangle.Height - 1 - circularWidth)));
-                e.Graphics.DrawEllipse(p, new Rectangle(tyx, tyy, tyw, tyh));
+                e.Graphics.DrawEllipse(p, tyx, tyy, tyw, tyh);
             }
         }
     }

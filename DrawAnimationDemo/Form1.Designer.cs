@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +56,10 @@
             this.customHxjdtControl2 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
             this.customHxjdtControl1 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ellipseControl1 = new DrawAnimationDemo.CustomControl.EllipseControl();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarh)).BeginInit();
@@ -64,6 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarx)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -98,10 +104,19 @@
             this.tabPage3.Text = "测试";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "label5";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(373, 37);
+            this.label4.Location = new System.Drawing.Point(366, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 12);
             this.label4.TabIndex = 9;
@@ -110,7 +125,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(372, 14);
+            this.label3.Location = new System.Drawing.Point(366, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 12);
             this.label3.TabIndex = 8;
@@ -119,7 +134,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 35);
+            this.label2.Location = new System.Drawing.Point(136, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 12);
             this.label2.TabIndex = 7;
@@ -128,7 +143,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 13);
+            this.label1.Location = new System.Drawing.Point(136, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(17, 12);
             this.label1.TabIndex = 6;
@@ -384,6 +399,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -392,14 +408,49 @@
             this.tabPage2.Text = "柱形进度条";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // panel2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "label5";
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.ellipseControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(581, 296);
+            this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "label6";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(154, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ellipseControl1
+            // 
+            this.ellipseControl1.CenterPotion = new System.Drawing.Point(290, 280);
+            this.ellipseControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ellipseControl1.LeftPotion = new System.Drawing.Point(2, 295);
+            this.ellipseControl1.Location = new System.Drawing.Point(0, 0);
+            this.ellipseControl1.Name = "ellipseControl1";
+            this.ellipseControl1.RightPotion = new System.Drawing.Point(578, 295);
+            this.ellipseControl1.Size = new System.Drawing.Size(581, 296);
+            this.ellipseControl1.TabIndex = 2;
+            this.ellipseControl1.Text = "ellipseControl1";
             // 
             // Form1
             // 
@@ -419,6 +470,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarx)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -453,6 +507,10 @@
         private System.Windows.Forms.TrackBar trackBary;
         private System.Windows.Forms.TrackBar trackBarx;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button3;
+        private CustomControl.EllipseControl ellipseControl1;
     }
 }
 

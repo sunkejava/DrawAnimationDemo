@@ -52,6 +52,12 @@
     <Compile Include="CustomControl\CustomHxjdtControl.Designer.cs">
       <DependentUpon>CustomHxjdtControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControl\EllipseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\EllipseControl.Designer.cs">
+      <DependentUpon>EllipseControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\tyControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControl\EllipseControl.resx">
+      <DependentUpon>EllipseControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\tyControl.resx">
       <DependentUpon>tyControl.cs</DependentUpon>
     </EmbeddedResource>
