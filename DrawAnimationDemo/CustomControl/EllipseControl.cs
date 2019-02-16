@@ -11,6 +11,10 @@ using System.Drawing.Drawing2D;
 
 namespace DrawAnimationDemo.CustomControl
 {
+    /// <summary>
+    /// 根据三点画圆
+    /// SK  2018-02-14
+    /// </summary>
     public partial class EllipseControl : Control
     {
         private Point leftPotion = new Point(0, 0);
