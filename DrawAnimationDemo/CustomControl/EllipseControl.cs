@@ -21,6 +21,7 @@ namespace DrawAnimationDemo.CustomControl
         private Point rightPotion = new Point(0, 0);
         private Point centerPotion = new Point(0, 0);
         private bool isShowPotion = false;
+        private string strValue = "我是有底线的";
         public EllipseControl()
         {
             InitializeComponent();
@@ -78,6 +79,9 @@ namespace DrawAnimationDemo.CustomControl
                 isShowPotion = value;
             }
         }
+        [Description("提示内容"), Category("自定义属性")]
+        public string StrValue { get => strValue; set => strValue = value; }
+
         protected override void OnSizeChanged(EventArgs e)
         {
             leftPotion = new Point(0, this.Height);
@@ -227,8 +231,8 @@ namespace DrawAnimationDemo.CustomControl
                 else Delta12 = angle2 - angle1 + 360;
                 mImgGraph.FillEllipse(new SolidBrush(Color.FromArgb(125, 255, 92, 138)), (int)(x0 - radius), (int)(y0 - radius), (int)(2 * radius), (int)(2 * radius));
 
-                SizeF size = mImgGraph.MeasureString("我是有底线的", new Font("黑体", 10F, System.Drawing.FontStyle.Bold));
-                mImgGraph.DrawString("我是有底线的", new Font("华文新魏", 10F, System.Drawing.FontStyle.Bold), new SolidBrush(Color.White), new Point(this.Width / 2 - (int)size.Width / 2 - 1, ((y1-y3)/2+y3) - (int)size.Height/2 + 2));
+                SizeF size = mImgGraph.MeasureString(strValue, new Font("黑体", 10F, System.Drawing.FontStyle.Bold));
+                mImgGraph.DrawString(strValue, new Font("华文新魏", 10F, System.Drawing.FontStyle.Bold), new SolidBrush(Color.White), new Point(this.Width / 2 - (int)size.Width / 2 - 1, ((y1-y3)/2+y3) - (int)size.Height/2 + 2));
             }
         }
     }
