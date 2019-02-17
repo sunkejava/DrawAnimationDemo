@@ -288,13 +288,14 @@
             // 
             // ellipseControl2
             // 
-            this.ellipseControl2.CenterPotion = new System.Drawing.Point(288, 72);
+            this.ellipseControl2.CenterPotion = new System.Drawing.Point(288, 5);
             this.ellipseControl2.IsShowPotion = false;
-            this.ellipseControl2.LeftPotion = new System.Drawing.Point(0, 94);
-            this.ellipseControl2.Location = new System.Drawing.Point(8, 3);
+            this.ellipseControl2.LeftPotion = new System.Drawing.Point(0, 50);
+            this.ellipseControl2.Location = new System.Drawing.Point(8, 46);
             this.ellipseControl2.Name = "ellipseControl2";
-            this.ellipseControl2.RightPotion = new System.Drawing.Point(576, 94);
-            this.ellipseControl2.Size = new System.Drawing.Size(576, 94);
+            this.ellipseControl2.RightPotion = new System.Drawing.Point(576, 50);
+            this.ellipseControl2.Size = new System.Drawing.Size(576, 50);
+            this.ellipseControl2.StrValue = "我是有底线的";
             this.ellipseControl2.TabIndex = 1;
             this.ellipseControl2.Text = "ellipseControl2";
             // 
@@ -456,7 +457,7 @@
             // 
             // ellipseControl1
             // 
-            this.ellipseControl1.CenterPotion = new System.Drawing.Point(290, 236);
+            this.ellipseControl1.CenterPotion = new System.Drawing.Point(290, 5);
             this.ellipseControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ellipseControl1.IsShowPotion = false;
             this.ellipseControl1.LeftPotion = new System.Drawing.Point(0, 296);
@@ -464,6 +465,7 @@
             this.ellipseControl1.Name = "ellipseControl1";
             this.ellipseControl1.RightPotion = new System.Drawing.Point(581, 296);
             this.ellipseControl1.Size = new System.Drawing.Size(581, 296);
+            this.ellipseControl1.StrValue = "我是有底线的";
             this.ellipseControl1.TabIndex = 2;
             this.ellipseControl1.Text = "ellipseControl1";
             // 

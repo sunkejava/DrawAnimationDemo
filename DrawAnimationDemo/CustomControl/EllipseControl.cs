@@ -86,7 +86,7 @@ namespace DrawAnimationDemo.CustomControl
         {
             leftPotion = new Point(0, this.Height);
             rightPotion = new Point(this.Width, this.Height);
-            centerPotion = new Point(this.Width / 2, this.Height / 5 * 4);
+            centerPotion = new Point(this.Width / 2, 5);
             base.Refresh();
         }
         protected override void OnPaint(PaintEventArgs ce)

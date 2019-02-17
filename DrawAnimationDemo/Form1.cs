@@ -20,7 +20,7 @@ namespace DrawAnimationDemo
         private Color mainColor = Color.FromArgb(255, 92, 138);//背景色
         private static Timer tmc = new Timer();
         Graphics pc = null;
-        private int cheight = 280;
+        private int cheight = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             tmc.Enabled = true;
@@ -31,6 +31,7 @@ namespace DrawAnimationDemo
             getValue();
             tmc.Interval = 50;
             tmc.Tick += Tmc_Tick;
+            cheight = ellipseControl2.Height - 10;
         }
 
         private void Tmc_Tick(object sender, EventArgs e)
@@ -83,15 +84,15 @@ namespace DrawAnimationDemo
         private void button2_Click(object sender, EventArgs e)
         {
             Timer tm = new Timer();
-            tm.Interval = 30;
+            tm.Interval = 60;
             tm.Tick += Tm_Tick;
             tm.Enabled = true;
-            cheight = ellipseControl2.Height - 15;
+            cheight = ellipseControl2.Height - 10;
         }
 
         private void Tm_Tick(object sender, EventArgs e)
         {
-            if (cheight >= ellipseControl2.Height-50)
+            if (cheight > 10)
             {
                 ellipseControl2.Visible = true;
                 ellipseControl2.CenterPotion = new Point(ellipseControl2.CenterPotion.X, cheight);
@@ -102,7 +103,7 @@ namespace DrawAnimationDemo
             {
                 Timer tm = sender as Timer;
                 tm.Enabled = false;
-                cheight = 280;
+                cheight = ellipseControl2.Height-10;
                 ellipseControl2.Visible = false;
                 ellipseControl2.Refresh();
             }
@@ -310,7 +311,7 @@ namespace DrawAnimationDemo
 
         private void Tmca_Tick(object sender, EventArgs e)
         {
-            if (cheight >= 240)
+            if (cheight >= 10)
             {
                 ellipseControl1.Visible = true;
                 ellipseControl1.CenterPotion = new Point(ellipseControl1.CenterPotion.X, cheight);
@@ -321,7 +322,7 @@ namespace DrawAnimationDemo
             {
                 Timer tm = sender as Timer;
                 tm.Enabled = false;
-                cheight = 280;
+                cheight = ellipseControl2.Height-10;
                 ellipseControl1.Visible = false;
                 ellipseControl1.Refresh();
             }
