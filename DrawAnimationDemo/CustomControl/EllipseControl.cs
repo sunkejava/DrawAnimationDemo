@@ -80,8 +80,11 @@ namespace DrawAnimationDemo.CustomControl
             }
         }
         [Description("提示内容"), Category("自定义属性")]
-        public string StrValue { get => strValue; set => strValue = value; }
-
+        public string StrValue
+        {
+            get { return strValue; }
+            set { strValue = value; }
+        }
         protected override void OnSizeChanged(EventArgs e)
         {
             leftPotion = new Point(0, this.Height);
