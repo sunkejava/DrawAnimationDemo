@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LayeredSkin.Forms;
 
 namespace DrawAnimationDemo
 {
-    public partial class LayeredDemo : Form
+    public partial class LayeredDemo : LayeredForm
     {
         public LayeredDemo()
         {
