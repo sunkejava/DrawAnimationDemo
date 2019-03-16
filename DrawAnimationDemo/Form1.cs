@@ -328,5 +328,11 @@ namespace DrawAnimationDemo
             }
             
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LayeredDemo ld = new LayeredDemo();
+            ld.Show();
+        }
     }
 }

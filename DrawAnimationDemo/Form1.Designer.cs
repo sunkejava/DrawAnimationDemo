@@ -41,14 +41,10 @@
             this.trackBarx = new System.Windows.Forms.TrackBar();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.ellipseControl2 = new DrawAnimationDemo.CustomControl.EllipseControl();
             this.tyControl1 = new DrawAnimationDemo.CustomControl.tyControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.customHxjdtControl11 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
             this.customHxjdtControl10 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
             this.customHxjdtControl9 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
@@ -60,7 +56,12 @@
             this.customHxjdtControl3 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
             this.customHxjdtControl2 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
             this.customHxjdtControl1 = new DrawAnimationDemo.CustomControl.CustomHxjdtControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.ellipseControl1 = new DrawAnimationDemo.CustomControl.EllipseControl();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarh)).BeginInit();
@@ -211,8 +212,35 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // ellipseControl2
+            // 
+            this.ellipseControl2.CenterPotion = new System.Drawing.Point(288, 5);
+            this.ellipseControl2.IsShowPotion = false;
+            this.ellipseControl2.LeftPotion = new System.Drawing.Point(0, 50);
+            this.ellipseControl2.Location = new System.Drawing.Point(8, 46);
+            this.ellipseControl2.Name = "ellipseControl2";
+            this.ellipseControl2.RightPotion = new System.Drawing.Point(576, 50);
+            this.ellipseControl2.Size = new System.Drawing.Size(576, 50);
+            this.ellipseControl2.StrValue = "我是有底线的";
+            this.ellipseControl2.TabIndex = 1;
+            this.ellipseControl2.Text = "ellipseControl2";
+            // 
+            // tyControl1
+            // 
+            this.tyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tyControl1.Location = new System.Drawing.Point(0, 0);
+            this.tyControl1.Name = "tyControl1";
+            this.tyControl1.Size = new System.Drawing.Size(587, 249);
+            this.tyControl1.TabIndex = 0;
+            this.tyControl1.Text = "tyControl1";
+            this.tyControl1.Tyh = 293;
+            this.tyControl1.Tyw = 293;
+            this.tyControl1.Tyx = 125;
+            this.tyControl1.Tyy = 258;
+            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.customHxjdtControl11);
             this.tabPage1.Controls.Add(this.customHxjdtControl10);
@@ -242,75 +270,6 @@
             this.button1.Text = "动态";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(587, 302);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "柱形进度条";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.ellipseControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(581, 296);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label6";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(154, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // ellipseControl2
-            // 
-            this.ellipseControl2.CenterPotion = new System.Drawing.Point(288, 5);
-            this.ellipseControl2.IsShowPotion = false;
-            this.ellipseControl2.LeftPotion = new System.Drawing.Point(0, 50);
-            this.ellipseControl2.Location = new System.Drawing.Point(8, 46);
-            this.ellipseControl2.Name = "ellipseControl2";
-            this.ellipseControl2.RightPotion = new System.Drawing.Point(576, 50);
-            this.ellipseControl2.Size = new System.Drawing.Size(576, 50);
-            this.ellipseControl2.StrValue = "我是有底线的";
-            this.ellipseControl2.TabIndex = 1;
-            this.ellipseControl2.Text = "ellipseControl2";
-            // 
-            // tyControl1
-            // 
-            this.tyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tyControl1.Location = new System.Drawing.Point(0, 0);
-            this.tyControl1.Name = "tyControl1";
-            this.tyControl1.Size = new System.Drawing.Size(587, 249);
-            this.tyControl1.TabIndex = 0;
-            this.tyControl1.Text = "tyControl1";
-            this.tyControl1.Tyh = 293;
-            this.tyControl1.Tyw = 293;
-            this.tyControl1.Tyx = 125;
-            this.tyControl1.Tyy = 258;
             // 
             // customHxjdtControl11
             // 
@@ -455,6 +414,49 @@
             this.customHxjdtControl1.Text = "customHxjdtControl1";
             this.customHxjdtControl1.Value = 30;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(587, 302);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "柱形进度条";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.ellipseControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(581, 296);
+            this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "label6";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(154, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // ellipseControl1
             // 
             this.ellipseControl1.CenterPotion = new System.Drawing.Point(290, 5);
@@ -468,6 +470,16 @@
             this.ellipseControl1.StrValue = "我是有底线的";
             this.ellipseControl1.TabIndex = 2;
             this.ellipseControl1.Text = "ellipseControl1";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(243, 242);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -529,6 +541,7 @@
         private System.Windows.Forms.Button button3;
         private CustomControl.EllipseControl ellipseControl1;
         private CustomControl.EllipseControl ellipseControl2;
+        private System.Windows.Forms.Button button4;
     }
 }
 

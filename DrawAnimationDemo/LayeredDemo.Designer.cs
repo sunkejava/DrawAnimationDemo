@@ -38,7 +38,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "LayeredDemo";
             this.Radius = 25;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LayeredDemo";
+            this.Load += new System.EventHandler(this.LayeredDemo_Load);
             this.ResumeLayout(false);
 
         }
