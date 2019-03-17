@@ -12,7 +12,7 @@ using LayeredSkin.Controls;
 
 namespace DrawAnimationDemo.CustomControl
 {
-    public partial class CustomControl1 : LayeredBaseControl
+    public partial class CustomControl1 : LayeredSkin.DirectUI.DuiBaseControl
     {
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace DrawAnimationDemo.CustomControl
         public CustomControl1()
         {
             InitializeComponent();
-            this.BackColor = Color.DarkGray;
+            this.BackColor = Color.Transparent;
         }
         private bool isSizeChangeAble = true; //是否允许OnSizeChanged执行
         protected override void OnSizeChanged(EventArgs e)
@@ -99,11 +99,11 @@ namespace DrawAnimationDemo.CustomControl
                 isSizeChangeAble = true;
                 return;
             }
+            return;
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            //base.OnPaint(e);
             try
             {
                 e.Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;

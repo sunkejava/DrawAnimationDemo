@@ -23,13 +23,14 @@ namespace DrawAnimationDemo
 
         private void LayeredDemo_Load(object sender, EventArgs e)
         {
-            
             cs.Size = new Size(150, 150);
             cs.Location = new Point(100, 50);
             cs.Value = 0;
             cs.BackColor = Color.Transparent;
+            cs.Lcp = System.Drawing.Drawing2D.LineCap.Round;
+            cs.CircularWidth = 30;
             cs.Visible = true;
-            this.Controls.Add(cs);
+            lbu.DUIControls.Add(cs);
             tmc.Enabled = true;
             tmc.Interval = 50;
             tmc.Tick += Tmc_Tick;
@@ -46,8 +47,6 @@ namespace DrawAnimationDemo
                 //customControl11.Value = 0;
                 cs.Value = 0;
             }
-            this.Refresh();
-            cs.Refresh();
         }
 
     }
